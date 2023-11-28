@@ -13,3 +13,4 @@ tags
 .clangd/*
 .scannerwork/*
 compile_commands.json
+.DS_Store

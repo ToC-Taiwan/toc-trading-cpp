@@ -12,13 +12,15 @@ macro(path_win_to_linux MsysPath ResultingPath)
   string(REGEX REPLACE "^([a-zA-Z]):/" "/\\1/" ${ResultingPath} "${MsysPath}")
 endmacro()
 
+cmake_policy(SET CMP0109 OLD)
+
 # enable if doxygen found
-find_package(Doxygen 1.8.0)
+find_package(Doxygen 1.9.8)
 message(STATUS "Can build doc?                            ${DOXYGEN_FOUND}")
 if(DOXYGEN_FOUND)
     # Search for plantUML for creating UML diagrams from doxygen
-    find_program(PLANT_UML_PATH plantuml.jar PATH_SUFFIXES PlantUML plantuml Plantuml 
-        PATHS /usr/share /usr/local/share/ /usr/local/bin c/Program\ Files* )
+    find_program(PLANT_UML_PATH plantuml.jar PATH_SUFFIXES PlantUML plantuml Plantuml
+        PATHS /opt/homebrew/Cellar/plantuml/1.2023.12/libexec /usr/share /usr/local/share/ /usr/local/bin c/Program\ Files* )
     if(NOT PLANT_UML_PATH)
         message(WARNING "Looking for PlantUML - not found, some UML diagrams will not be generated via doxygen.")
     else()

@@ -4,6 +4,8 @@
 
 include(CTest)
 
+cmake_policy(SET CMP0110 OLD)
+
 # Convenience targets for fast testing, they depends on binaries (so the build
 # is triggered, when sources were changed).
 add_custom_target(check
@@ -22,7 +24,7 @@ add_custom_target(checkVerbose
 # CTest test suite
 #
 # Test suite is defined here, when executed test fails (returns not 0), test
-# failed. There are more options, check CMake documentation. 
+# failed. There are more options, check CMake documentation.
 #
 # Good to use to integration test, run whole program with parameters,
 # check if it will crash, produce correct results, etc.

@@ -90,7 +90,9 @@ Two ways, which were tested:
 Standard Makefiles:
 
 ```sh
-mkdir build ; cd build
+rm -rf build
+mkdir build
+cd build
 cmake ..
 make -j8
 ```
@@ -98,7 +100,9 @@ make -j8
 Ninja build witch clang, build all+doc and install it to dist folder:
 
 ```sh
-mkdir build ; cd build
+rm -rf build
+mkdir build
+cd build
 cmake -GNinja -DCMAKE_CXX_COMPILER="clang++" ..
 ninja all doc install
 ```
@@ -106,7 +110,9 @@ ninja all doc install
 Release build which will install itself into `/usr` after `sudo make install`
 
 ```sh
-mkdir build ; cd build
+rm -rf build
+mkdir build
+cd build
 cmake .. -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_BUILD_TYPE="Release"
 make -j8 all
 sudo make install
@@ -121,7 +127,9 @@ On windows you should prefer Ninja since it is much faster than make (but has no
 With gcc:
 
 ```sh
-mkdir build ; cd build
+rm -rf build
+mkdir build
+cd build
 cmake -GNinja ..
 ninja install
 ```
