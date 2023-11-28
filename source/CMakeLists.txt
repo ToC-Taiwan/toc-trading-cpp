@@ -105,9 +105,9 @@ add_custom_target(run DEPENDS exampleApp-run)
 # target_link_libraries(exampleApp PRIVATE ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
 
 # How to use some other standard packages
-# find_package(ZLIB REQUIRED) 
+# find_package(ZLIB REQUIRED)
 # target_link_libraries (exampleApp PRIVATE ZLIB::ZLIB)
-# 
+#
 # find_package(OpenSSL REQUIRED)
 # target_link_libraries (exampleApp PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 #

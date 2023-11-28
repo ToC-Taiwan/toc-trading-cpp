@@ -61,7 +61,7 @@ macro(ExternalHeaderOnly_Add LIBNAME REPOSITORY GIT_TAG INCLUDE_FOLDER_PATH)
 endmacro()
 
 #------------------------------------------------------------------------------
-# This command will clone git repo during cmake setup phase, also adds 
+# This command will clone git repo during cmake setup phase, also adds
 # ${LIBNAME}_update target into general update target.
 # Example usage:
 #

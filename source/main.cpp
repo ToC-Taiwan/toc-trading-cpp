@@ -1,5 +1,6 @@
-#include <iostream>
 #include <stdio.h>
+
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -8,8 +9,7 @@
 
 using namespace std;
 
-void printHelp()
-{
+void printHelp() {
     cout << "Help for cleanCppApplication " << endl;
     cout << "Version: " << Version::current().asLongStr() << endl;
     cout << "Version: " << Version::current().asShortStr() << endl;
@@ -58,16 +58,14 @@ void printHelp()
  *
  * \enduml
  */
-int main(int argc, char const* argv[])
-{
+int main(int argc, char const* argv[]) {
     // Print help if no arguments are given
     if (argc == 1)
         printHelp();
 
     // process parameters
     int argIt;
-    for (argIt = 1; argIt < argc; ++argIt)
-    {
+    for (argIt = 1; argIt < argc; ++argIt) {
         string tmp = argv[argIt];
 
         if (tmp == "--help" || tmp == "-h")
