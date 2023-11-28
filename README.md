@@ -1,7 +1,5 @@
 # cleanCppProject
 
-![Build Status](https://travis-ci.org/kracejic/cleanCppProject.svg?branch=master)
-
 This is an empty frame for project in C++. It should help to start a new project without caring much about project/build environment setup.
 
 ## Features
